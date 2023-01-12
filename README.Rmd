@@ -110,6 +110,7 @@ power_es <- power_or |>
   as.data.frame()
 
 tab_est <- cbind(tab_est,sif_est,gpp_es,ndvi_es,lai_es,lst_est,power_es)
+tab_est
 
 write.csv(tab_est, 'data/estatistica_descr.csv')
 
@@ -220,6 +221,7 @@ tab_me <-xco2_m |>
   dplyr::left_join(lst_m) |> 
   dplyr::left_join(power_m) |> 
   dplyr::filter(ano>2014 & ano < 2022)
+tab_me
 
 write.csv(tab_me,'data/médias_desv.csv')
 
